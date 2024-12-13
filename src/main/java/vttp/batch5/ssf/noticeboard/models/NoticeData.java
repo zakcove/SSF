@@ -17,7 +17,7 @@ public class NoticeData {
     @Future(message = "Post date must be in the future.")
     private LocalDate postDate;
 
-    @NotEmpty(message = "At least one category is required.")
+    @NotEmpty(message = "At least 1 category is required.")
     private List<String> categories;
 
     @NotEmpty(message = "Cannot be empty.")

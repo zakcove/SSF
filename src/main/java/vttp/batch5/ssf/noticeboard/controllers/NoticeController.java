@@ -38,11 +38,11 @@ public class NoticeController {
         Map<String, Object> response = noticeService.postToNoticeServer(noticeData);
 
         if (response.containsKey("id")) {
-            model.addAttribute("message", "Notice published successfully with ID: " + response.get("id"));
-            return "success"; 
+            model.addAttribute("noticeId", response.get("id"));
+            return "success";
         } else {
-            model.addAttribute("error", response.get("message"));
-            return "notice"; 
+            model.addAttribute("errorMessage", response.getOrDefault("message", "ERROR"));
+            return "error";
         }
     }
 }

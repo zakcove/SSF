@@ -10,7 +10,7 @@ public class NoticeRepository {
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;
 
-    // SET notice:<id> '{"id":"abc123", "timestamp":111111111}'
+    // SET notice:<id> '{"id":"abc123", "timestamp":1111111111111}'
     public void insertNotices(String id, String payload) {
         redisTemplate.opsForValue().set("notice:" + id, payload);
     }
