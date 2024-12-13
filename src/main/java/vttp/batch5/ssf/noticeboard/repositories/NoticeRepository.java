@@ -10,8 +10,18 @@ public class NoticeRepository {
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;
 
-    // SET notice:<id> '{"id":"abc123", "timestamp":1111111111111}'
+    // SET notice:<id> '{"id":"abc1234", "timestamp":1111111111111}'
     public void insertNotices(String id, String payload) {
         redisTemplate.opsForValue().set("notice:" + id, payload);
     }
+	
+    // RANDOMKEY
+    public boolean isHealthy() {
+        try {
+            redisTemplate.randomKey();
+            return true; 
+        } catch (Exception e) {
+            return false; 
+        }
+    } 
 }

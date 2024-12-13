@@ -8,6 +8,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+
 import vttp.batch5.ssf.noticeboard.models.NoticeData;
 import vttp.batch5.ssf.noticeboard.services.NoticeService;
 
