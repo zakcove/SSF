@@ -8,19 +8,19 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 
 public class NoticeData {
-    @Size(min = 3, max = 128, message = "The title must be between 3 and 128 characters long.")
+    @Size(min = 3, max = 128, message = "Must be between 3 and 128 characters long.")
     private String title;
 
-    @Email(message = "Invalid email format.")
+    @Email(message = "Invalid format.")
     private String poster;
 
-    @Future(message = "The post date must be in the future.")
+    @Future(message = "Post date must be in the future.")
     private LocalDate postDate;
 
     @NotEmpty(message = "At least one category is required.")
     private List<String> categories;
 
-    @NotEmpty(message = "Text content cannot be empty.")
+    @NotEmpty(message = "Cannot be empty.")
     private String text;
     
 
