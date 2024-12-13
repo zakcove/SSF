@@ -32,4 +32,4 @@ ENV NOTICE_PUBLISHING_SERVER_URL=
 EXPOSE ${PORT}
 
 # Run the application
-ENTRYPOINT SERVER_PORT=${PORT} java -jar target/noticeboardapp-0.0.1-SNAPSHOT.jar 
+ENTRYPOINT SERVER_PORT=${PORT} java -jar target/noticeboard-0.0.1-SNAPSHOT.jar 

@@ -34,7 +34,7 @@ public class NoticeService {
         Map<String, Object> payload = new HashMap<>();
         payload.put("title", noticeData.getTitle());
         payload.put("poster", noticeData.getPoster());
-        payload.put("postDate", noticeData.getPostDate().toEpochDay() * 86400000); // Convert to milliseconds
+        payload.put("postDate", noticeData.getPostDate().toEpochDay() * 86400000);
         payload.put("categories", noticeData.getCategories());
         payload.put("text", noticeData.getText());
 
